@@ -20,7 +20,7 @@ logger.addHandler(handler)
 
 
 class OcrDB(object):
-    def __init__(self, user="root", password="123456", database="video_data_info", table="video_data_copy", host='127.0.0.1', port=3306):  # 这里的域名看数据库在哪里机器上写成哪个机器
+    def __init__(self, user="root", password="123456", database="video_data_info", table="video_data_copy", host='127.0.0.1', port=3306): 
         self.table = table
         self.connect = pymysql.connect(host=host, port=port, database=database, user=user, password=password, charset='utf8')
         self.cursor = self.connect.cursor(DictCursor)
